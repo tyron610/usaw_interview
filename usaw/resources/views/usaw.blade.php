@@ -36,4 +36,17 @@
         }
     </style>
 </head>
+
+<body>
+   <h1>Welcome to the USAW page!</h1>
+   <form action="/usaw" method="POST">
+       @csrf
+       <div class="form-group">
+           <label for="name">Name:</label>
+           <input type="text" id="name" name="name" required>
+       </div>
+       <button type="submit">Submit</button>
+   </form>
+</body>
+
 </html>
