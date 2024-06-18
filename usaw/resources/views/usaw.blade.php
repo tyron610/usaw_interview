@@ -1,5 +1,4 @@
 <!-- resources/views/usaw.blade.php -->
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,17 +35,35 @@
         }
     </style>
 </head>
-
 <body>
-   <h1>Welcome to the USAW page!</h1>
+<h1>Welcome to the USAW page!</h1>
    <form action="/usaw" method="POST">
        @csrf
        <div class="form-group">
            <label for="name">Name:</label>
            <input type="text" id="name" name="name" required>
        </div>
+       <div class="form-group">
+           <label for="color">Favorite Color:</label>
+           <select id="color" name="color" required>
+               <option value="">Select a color</option>
+               <option value="red">Red</option>
+               <option value="green">Green</option>
+               <option value="blue">Blue</option>
+               <option value="yellow">Yellow</option>
+               <option value="black">Black</option>
+               <option value="white">White</option>
+               <option value="purple">Purple</option>
+               <option value="orange">Orange</option>
+               <option value="brown">Brown</option>
+           </select>
+       </div>
+       <div class="form-group">
+           <label>
+               <input type="checkbox" id="consent" name="consent" required>
+               I acknowledge I am submitting this for Tyron Everett's USAW Interview Project.
+           </label>
+       </div>
        <button type="submit">Submit</button>
    </form>
 </body>
-
-</html>
