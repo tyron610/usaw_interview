@@ -12,9 +12,7 @@ Route::get('/usaw', function () {
 
 Route::post('/usaw', function (\Illuminate\Http\Request $request) {
     $name = $request->input('name');
-    $color = $request->input('color');
-    $consent = $request->input('consent');
-    
-    return 'Form Submitted Successfully!' . "\n" . 'Name: ' . $name . 'Favorite Color: ' . $color;
+    $color = $request->input('color'); 
+    return 'Form Submitted Successfully!' . ' Name: ' . $name . ' Favorite Color: ' . $color;
  });
  
